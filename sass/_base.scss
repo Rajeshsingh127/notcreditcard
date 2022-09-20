@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+$active-input-border: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+$input-error: hsl(0, 100%, 66%);
+$white: hsl(0, 0%, 100%);
+$light-grey-violet: hsl(270, 3%, 87%);
+$dark-grey-violet: hsl(279, 6%, 55%);
+$very-dark-violet: hsl(278, 68%, 11%);
+$font-family: 'Space Grotesk';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: max-content;
+  min-height: 100vh;
+  padding: 0;
+  font-family: $font-family;
+}
+
+.pa {
+  position: absolute;
+}
+
+img {
+  max-width: 100%;
+}

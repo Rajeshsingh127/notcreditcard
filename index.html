@@ -1,51 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="container__sidebar">
+        <div class="cardb">
+          <img src="./images/bg-card-back.png" alt="" class="cardb__img" />
+          <p class="cardb__cvv" id="cc__cvv">000</p>
+        </div>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+        <div class="cardf">
+          <img src="./images/bg-card-front.png" alt="" class="cardf__img" />
+          <div class="cardf__img pa">
+            <img src="./images/card-logo.svg" alt="" />
+          </div>
 
-  000
+          <p class="cardf__num pa" id="cc__num">0000 0000 0000 0000</p>
 
-  Cardholder Name
-  e.g. Jane Appleseed
+          <p class="cardf__name pa" id="cc__name">Jane appleseed</p>
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+          <div class="cardf__date pa">
+            <span class="cardf__mon" id="cc__mon">12</span>
+            /
+            <span class="cardf__year" id="cc__year">24</span>
+          </div>
+        </div>
+      </div>
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+      <div class="container__main">
+        <form action="#" class="form" id="form" name="credit-card-form">
+          <div class="form__box">
+            <label for="name" class="form__label">cardholder name</label
+            ><input
+              type="text"
+              id="name"
+              class="form__input"
+              placeholder="e.g. Jane Appleseed"
+              maxlength="20"
+            />
+            <span class="form__error" id="name-error"></span>
+          </div>
+          <div class="form__box">
+            <label for="number" class="form__label">card number</label
+            ><input
+              type="tel"
+              id="number"
+              class="form__input"
+              maxlength="19"
+              placeholder="e.g. 1234 5678 9123 0000"
+            />
+            <span class="form__error" id="num-error"></span>
+          </div>
+          <div class="form__box form__last">
+            <div class="form__box form__mmyy">
+              <label for="MM" class="form__label form__label-grid"
+                >exp. date (MM/YY)</label
+              ><input
+                type="te;"
+                id="MM"
+                class="form__input"
+                aria-labelledby="mm"
+                placeholder="MM"
+                maxlength="2"
+              />
+              <input
+                type="tel"
+                id="YY"
+                aria-labelledby="mm"
+                class="form__input"
+                placeholder="YY"
+                maxlength="2"
+              />
+            </div>
 
-  CVC
-  e.g. 123
+            <div class="form__box form__cvc">
+              <label for="cvc" class="form__label">CVC</label
+              ><input
+                type="tel"
+                id="cvc"
+                class="form__input"
+                placeholder="CVC"
+                maxlength="3"
+              />
+            </div>
+            <span class="form__error" id="month-error"></span>
+            <span class="form__error" id="year-error"></span>
+            <span class="form__error" id="cvc-error"></span>
+          </div>
+          <input type="submit" value="Confirm" class="form__submit-btn" />
+        </form>
 
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <div class="complete" id="complete">
+          <img src="./images/icon-complete.svg" alt="" srcset="" />
+          <h1 class="complete__heading">thank you!</h1>
+          <p class="complete__p">We've added your card details</p>
+          <button class="complete__btn" id="continue-btn">Continue</button>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
 </html>

@@ -1,0 +1,188 @@
+.cardb,
+.cardf {
+  position: relative;
+  color: $white;
+  img {
+    width: 360px;
+    height: auto;
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 70%;
+  }
+}
+
+.cardb {
+  top: 2.5rem;
+  right: -10%;
+
+  @media screen and (min-width: 1100px) {
+    top: 12rem;
+    left: 7rem;
+  }
+  &__cvv {
+    position: absolute;
+    top: 4.6rem;
+    right: 2.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+.cardf {
+  top: -3.1rem;
+  left: -2rem;
+
+  @media screen and (min-width: 1100px) {
+    top: -15rem;
+    left: 3rem;
+  }
+
+  &__img {
+    width: 4rem;
+
+    top: 9%;
+    left: 7%;
+  }
+
+  &__num {
+    font-size: 1.6rem;
+    bottom: 17%;
+    left: 7%;
+  }
+
+  &__name {
+    bottom: 5%;
+    left: 1.3rem;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 0.09rem;
+  }
+
+  &__date {
+    font-size: 0.78rem;
+    bottom: 10%;
+    right: 1.3rem;
+  }
+}
+
+.form {
+  // display: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  width: 100%;
+
+  &__error {
+    color: $input-error;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+  }
+
+  &__input {
+    color: $very-dark-violet;
+    font-size: 1.2rem;
+    border-radius: 0.4rem;
+    height: 3rem;
+    border-style: solid;
+    border-color: $light-grey-violet;
+    padding: 1rem;
+    font-weight: 500;
+    font-family: $font-family;
+    &::placeholder {
+      color: $dark-grey-violet;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    &:focus {
+      outline: none;
+
+      // border-image: $active-input-border;
+      // border-image: $active-input-border 1;
+    }
+  }
+
+  &__hide {
+    display: none;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    text-transform: uppercase;
+    color: $very-dark-violet;
+    font-size: 0.85rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  &__mmyy {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 0.7rem;
+  }
+
+  &__label-grid {
+    grid-column: 1/-1;
+  }
+
+  &__last {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 0.7rem;
+  }
+
+  &__cvc {
+    grid-column: 3/ -1;
+  }
+
+  &__submit-btn {
+    border: none;
+    border-radius: 0.3rem;
+    background-color: $very-dark-violet;
+    color: $white;
+    height: 3rem;
+    font-size: 1.2rem;
+    font-family: $font-family;
+  }
+}
+
+.complete {
+  & > * {
+    margin-bottom: 2rem;
+  }
+  img {
+    align-self: center;
+  }
+  display: none;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  &__heading {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    align-self: center;
+  }
+
+  p {
+    color: $dark-grey-violet;
+    font-size: 1.3rem;
+    align-self: center;
+  }
+
+  &__btn {
+    border: none;
+    border-radius: 0.3rem;
+    background-color: $very-dark-violet;
+    color: $white;
+    height: 3rem;
+    font-size: 1.2rem;
+    font-family: $font-family;
+    align-self: stretch;
+  }
+}
